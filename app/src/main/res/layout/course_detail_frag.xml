@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_vew="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Teachers.CourseDetailFrag">
+
+    <TabHost
+        android:id="@+id/tab_host_course_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Tab widget to select the tab-->
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--FrameLayout which contains the data of the activity-->
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--for tab 1 Folder Tab-->
+                <LinearLayout
+                    android:id="@+id/Folder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/course_detail_header_folder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        card_vew:cardCornerRadius="3dp"
+                        card_vew:cardElevation="5dp"
+                        card_vew:cardUseCompatPadding="false">
+
+                        <ExpandableListView
+                            android:id="@+id/course_folder_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <!--for tab 2 ContentsTab-->
+                <LinearLayout
+                    android:id="@+id/Contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/course_detail_header_Contents"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardContents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            card_vew:cardCornerRadius="3dp"
+                            card_vew:cardElevation="5dp"
+                            android:elevation="10dp"
+                            card_vew:cardUseCompatPadding="false">
+
+                            <ExpandableListView
+                                android:id="@+id/course_Contents_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="545dp" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/course_detail_update_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="Update Contents" />
+
+
+                    <!--Text View for applying the text to the tab-->
+
+                </LinearLayout>
+
+
+                <!--for tab 3 Clo Tab-->
+                <LinearLayout
+                    android:id="@+id/Clos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/course_detail_header_Clos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardClos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        card_vew:cardCornerRadius="3dp"
+                        card_vew:cardElevation="5dp"
+                        android:elevation="10dp"
+                        card_vew:cardUseCompatPadding="false">
+
+                        <ExpandableListView
+                            android:id="@+id/course_Clos_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="545dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/course_detail_update_clo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="Update Clos" />
+
+
+                    <!--Text View for applying the text to the tab-->
+
+                </LinearLayout>
+
+                <!--for tab 4 Clo Tab-->
+                <LinearLayout
+                    android:id="@+id/clos_table_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                      <ListView
+                          android:id="@+id/clo_table"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"/>
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/C_Topics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/commonTopic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:textColor="#00FF00"
+                        android:textSize="20dp"
+                        android:text="Common Topics" />
+
+                    <ListView
+                        android:id="@+id/c_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </ListView>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>

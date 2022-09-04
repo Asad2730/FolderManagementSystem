@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_vew="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:id="@+id/cardClosAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        card_vew:cardCornerRadius="3dp"
+        card_vew:cardElevation="5dp"
+        android:elevation="0dp"
+        card_vew:cardUseCompatPadding="false">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+     <TextView
+         android:layout_marginTop="10dp"
+         android:id="@+id/adapter_des"
+         android:textStyle="bold"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textSize="18dp"
+         android:gravity="center_horizontal"
+         android:text="Clo1"/>
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <TextView
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="10dp"
+             android:id="@+id/adapter_mids"
+             android:textStyle="bold"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="15dp"
+             android:gravity="center_horizontal"
+             android:text="Mid Exams:"/>
+
+         <TextView
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="40dp"
+             android:id="@+id/adapter_finals"
+             android:textStyle="bold"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="15dp"
+             android:gravity="center_horizontal"
+             android:text="Final Exams:"/>
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+         <TextView
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="10dp"
+             android:id="@+id/adapter_q"
+             android:textStyle="bold"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="15dp"
+             android:gravity="center_horizontal"
+             android:text="Quizzes:"/>
+         <TextView
+             android:layout_marginLeft="20dp"
+             android:layout_marginTop="10dp"
+             android:id="@+id/adapter_a"
+             android:textStyle="bold"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="15dp"
+             android:gravity="center_horizontal"
+             android:text="Assignments:"/>
+
+
+
+     </LinearLayout>
+
+ </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
